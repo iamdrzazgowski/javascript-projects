@@ -3,6 +3,7 @@ let btns = document.querySelectorAll(".btn");
 let counter = 0;
 
 btns.forEach((btn) => {
+    
     btn.addEventListener("click", function (e) {
         // let name = e.currentTarget.classList;
         let name = e.target.classList;
