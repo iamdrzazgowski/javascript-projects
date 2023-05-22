@@ -1,21 +1,20 @@
 let resultField = document.querySelector(".result");
-let reset = document.querySelector(".reset");
-let decrease = document.querySelector(".decrease");
-let increase = document.querySelector(".increase");
+let btns = document.querySelectorAll(".btn");
+let counter = 0;
 
-let value = 0;
+btns.forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+        // let name = e.currentTarget.classList;
+        let name = e.target.classList;
 
-increase.addEventListener("click", () => {
-    value += 1;
-    resultField.textContent = value;
-});
+        if (name.contains("decrease")) {
+            counter--;
+        } else if (name.contains("increase")) {
+            counter++;
+        } else {
+            counter = 0;
+        }
 
-decrease.addEventListener("click", () => {
-    value -= 1;
-    resultField.textContent = value;
-});
-
-reset.addEventListener("click", () => {
-    value = 0;
-    resultField.textContent = value;
+        resultField.textContent = counter;
+    });
 });
