@@ -4,8 +4,8 @@ let counter = 0;
 
 btns.forEach((btn) => {
     btn.addEventListener("click", function (e) {
-        // let name = e.currentTarget.classList;
-        let name = e.target.classList;
+        let name = e.currentTarget.classList;
+        // let name = e.target.classList;
 
         if (name.contains("decrease")) {
             counter--;
